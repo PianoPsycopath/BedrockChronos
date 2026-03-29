@@ -9,6 +9,7 @@ Pure client side packs, meaning works as 'texture pack' even in multiplayer.
 # Personalized Villagers
 
 - Randomizes Villager textures based on given name
+- *Colorize.py* Creates multiple color variants from an alpha png
 
 # Horse Stats
 
