@@ -1,0 +1,15 @@
+{
+  "format_version": "1.8.0",
+
+"animations": {
+
+    "animation.player.calendar_no_bob": {
+        "loop": true,
+        "bones": {
+            "head_no_bob": {
+                
+            }
+        }
+    }
+}
+}

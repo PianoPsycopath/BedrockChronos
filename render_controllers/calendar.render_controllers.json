@@ -1,0 +1,192 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.calendar.day_tens": {
+      "arrays": {
+        "textures": {
+          "Array.digits": [
+            "Texture.digit_0", "Texture.digit_1", "Texture.digit_2", "Texture.digit_3", "Texture.digit_4",
+            "Texture.digit_5", "Texture.digit_6", "Texture.digit_7", "Texture.digit_8", "Texture.digit_9"
+          ]
+        }
+      },
+      "geometry": "Geometry.calendar_day_tens",
+      "materials": [{"*": "Material.calendar"}],
+      "textures": ["Array.digits[math.floor((math.mod(query.day, 365) < 31 ? math.mod(query.day, 365) + 1 : (math.mod(query.day, 365) < 59 ? math.mod(query.day, 365) - 30 : (math.mod(query.day, 365) < 90 ? math.mod(query.day, 365) - 58 : (math.mod(query.day, 365) < 120 ? math.mod(query.day, 365) - 89 : (math.mod(query.day, 365) < 151 ? math.mod(query.day, 365) - 119 : (math.mod(query.day, 365) < 181 ? math.mod(query.day, 365) - 150 : (math.mod(query.day, 365) < 212 ? math.mod(query.day, 365) - 180 : (math.mod(query.day, 365) < 243 ? math.mod(query.day, 365) - 211 : (math.mod(query.day, 365) < 273 ? math.mod(query.day, 365) - 242 : (math.mod(query.day, 365) < 304 ? math.mod(query.day, 365) - 272 : (math.mod(query.day, 365) < 334 ? math.mod(query.day, 365) - 303 : math.mod(query.day, 365) - 333))))))))))) / 10)]"]
+    },
+    
+    "controller.render.calendar.day_ones": {
+      "arrays": {
+        "textures": {
+          "Array.digits": [
+            "Texture.digit_0", "Texture.digit_1", "Texture.digit_2", "Texture.digit_3", "Texture.digit_4",
+            "Texture.digit_5", "Texture.digit_6", "Texture.digit_7", "Texture.digit_8", "Texture.digit_9"
+          ]
+        }
+      },
+      "geometry": "Geometry.calendar_day_ones",
+      "materials": [{"*": "Material.calendar"}],
+      "textures": ["Array.digits[math.mod((math.mod(query.day, 365) < 31 ? math.mod(query.day, 365) + 1 : (math.mod(query.day, 365) < 59 ? math.mod(query.day, 365) - 30 : (math.mod(query.day, 365) < 90 ? math.mod(query.day, 365) - 58 : (math.mod(query.day, 365) < 120 ? math.mod(query.day, 365) - 89 : (math.mod(query.day, 365) < 151 ? math.mod(query.day, 365) - 119 : (math.mod(query.day, 365) < 181 ? math.mod(query.day, 365) - 150 : (math.mod(query.day, 365) < 212 ? math.mod(query.day, 365) - 180 : (math.mod(query.day, 365) < 243 ? math.mod(query.day, 365) - 211 : (math.mod(query.day, 365) < 273 ? math.mod(query.day, 365) - 242 : (math.mod(query.day, 365) < 304 ? math.mod(query.day, 365) - 272 : (math.mod(query.day, 365) < 334 ? math.mod(query.day, 365) - 303 : math.mod(query.day, 365) - 333))))))))))), 10)]"]
+    },
+    
+    "controller.render.calendar.month": {
+      "arrays": {
+        "textures": {
+          "Array.months": [
+            "Texture.month_jan", "Texture.month_feb", "Texture.month_mar", "Texture.month_apr",
+            "Texture.month_may", "Texture.month_jun", "Texture.month_jul", "Texture.month_aug", 
+            "Texture.month_sep", "Texture.month_oct", "Texture.month_nov", "Texture.month_dec"
+          ]
+        }
+      },
+      "geometry": "Geometry.calendar_month",
+      "materials": [{"*": "Material.calendar"}],
+      "textures": ["Array.months[math.mod(query.day, 365) < 31 ? 0 : (math.mod(query.day, 365) < 59 ? 1 : (math.mod(query.day, 365) < 90 ? 2 : (math.mod(query.day, 365) < 120 ? 3 : (math.mod(query.day, 365) < 151 ? 4 : (math.mod(query.day, 365) < 181 ? 5 : (math.mod(query.day, 365) < 212 ? 6 : (math.mod(query.day, 365) < 243 ? 7 : (math.mod(query.day, 365) < 273 ? 8 : (math.mod(query.day, 365) < 304 ? 9 : (math.mod(query.day, 365) < 334 ? 10 : 11))))))))))]"]
+    },
+    
+    "controller.render.calendar.weekday": {
+      "arrays": {
+        "textures": {
+          "Array.weekdays": [
+            "Texture.day_sun", "Texture.day_mon", "Texture.day_tue", "Texture.day_wed",
+            "Texture.day_thu", "Texture.day_fri", "Texture.day_sat"
+          ]
+        }
+      },
+      "geometry": "Geometry.calendar_weekday",
+      "materials": [{"*": "Material.calendar"}],
+      "textures": ["Array.weekdays[math.mod(query.day, 7)]"]
+    },
+    
+    "controller.render.calendar.year_thousands": {
+      "arrays": {
+        "textures": {
+          "Array.digits": [
+            "Texture.digit_0", "Texture.digit_1", "Texture.digit_2", "Texture.digit_3", "Texture.digit_4",
+            "Texture.digit_5", "Texture.digit_6", "Texture.digit_7", "Texture.digit_8", "Texture.digit_9"
+          ]
+        }
+      },
+      "geometry": "Geometry.calendar_year_thousands",
+      "materials": [{"*": "Material.calendar"}],
+      "textures": ["Array.digits[math.floor(math.floor(query.day / 365) / 1000)]"]
+    },
+    
+    "controller.render.calendar.year_hundreds": {
+      "arrays": {
+        "textures": {
+          "Array.digits": [
+            "Texture.digit_0", "Texture.digit_1", "Texture.digit_2", "Texture.digit_3", "Texture.digit_4",
+            "Texture.digit_5", "Texture.digit_6", "Texture.digit_7", "Texture.digit_8", "Texture.digit_9"
+          ]
+        }
+      },
+      "geometry": "Geometry.calendar_year_hundreds",
+      "materials": [{"*": "Material.calendar"}],
+      "textures": ["Array.digits[math.mod(math.floor(query.day / 365 / 100), 10)]"]
+    },
+    
+    "controller.render.calendar.year_tens": {
+      "arrays": {
+        "textures": {
+          "Array.digits": [
+            "Texture.digit_0", "Texture.digit_1", "Texture.digit_2", "Texture.digit_3", "Texture.digit_4",
+            "Texture.digit_5", "Texture.digit_6", "Texture.digit_7", "Texture.digit_8", "Texture.digit_9"
+          ]
+        }
+      },
+      "geometry": "Geometry.calendar_year_tens",
+      "materials": [{"*": "Material.calendar"}],
+      "textures": ["Array.digits[math.mod(math.floor(query.day / 365 / 10), 10)]"]
+    },
+    
+    "controller.render.calendar.year_ones": {
+      "arrays": {
+        "textures": {
+          "Array.digits": [
+            "Texture.digit_0", "Texture.digit_1", "Texture.digit_2", "Texture.digit_3", "Texture.digit_4",
+            "Texture.digit_5", "Texture.digit_6", "Texture.digit_7", "Texture.digit_8", "Texture.digit_9"
+          ]
+        }
+      },
+      "geometry": "Geometry.calendar_year_ones",
+      "materials": [{"*": "Material.calendar"}],
+      "textures": ["Array.digits[math.mod(math.floor(query.day / 365), 10)]"]
+    },
+    
+    "controller.render.clock.hour_tens": {
+      "arrays": {
+        "textures": {
+          "Array.digits": [
+            "Texture.digit_0", "Texture.digit_1", "Texture.digit_2", "Texture.digit_3", "Texture.digit_4",
+            "Texture.digit_5", "Texture.digit_6", "Texture.digit_7", "Texture.digit_8", "Texture.digit_9"
+          ]
+        }
+      },
+      "geometry": "Geometry.clock_hour_tens",
+      "materials": [{"*": "Material.calendar"}],
+      "textures": ["Array.digits[math.floor(((math.mod(math.floor(query.time_of_day * 24) + 11, 12)) + 1) / 10)]"]
+    },
+    
+    "controller.render.clock.hour_ones": {
+      "arrays": {
+        "textures": {
+          "Array.digits": [
+            "Texture.digit_0", "Texture.digit_1", "Texture.digit_2", "Texture.digit_3", "Texture.digit_4",
+            "Texture.digit_5", "Texture.digit_6", "Texture.digit_7", "Texture.digit_8", "Texture.digit_9"
+          ]
+        }
+      },
+      "geometry": "Geometry.clock_hour_ones",
+      "materials": [{"*": "Material.calendar"}],
+      "textures": ["Array.digits[math.mod((math.mod(math.floor(query.time_of_day * 24) + 11, 12)) + 1, 10)]"]
+    },
+    
+    "controller.render.clock.colon": {
+      "geometry": "Geometry.clock_colon",
+      "materials": [{"*": "Material.calendar"}],
+      "textures": ["Texture.colon"]
+    },
+    
+    "controller.render.clock.minute_tens": {
+      "arrays": {
+        "textures": {
+          "Array.digits": [
+            "Texture.digit_0", "Texture.digit_1", "Texture.digit_2", "Texture.digit_3", "Texture.digit_4",
+            "Texture.digit_5", "Texture.digit_6", "Texture.digit_7", "Texture.digit_8", "Texture.digit_9"
+          ]
+        }
+      },
+      "geometry": "Geometry.clock_minute_tens",
+      "materials": [{"*": "Material.calendar"}],
+      "textures": ["Array.digits[math.floor(math.mod(math.floor(query.time_of_day * 288), 12) * 5 / 10)]"]
+    },
+    
+    "controller.render.clock.minute_ones": {
+      "arrays": {
+        "textures": {
+          "Array.digits": [
+            "Texture.digit_0", "Texture.digit_1", "Texture.digit_2", "Texture.digit_3", "Texture.digit_4",
+            "Texture.digit_5", "Texture.digit_6", "Texture.digit_7", "Texture.digit_8", "Texture.digit_9"
+          ]
+        }
+      },
+      "geometry": "Geometry.clock_minute_ones",
+      "materials": [{"*": "Material.calendar"}],
+      "textures": ["Array.digits[math.mod(math.mod(math.floor(query.time_of_day * 288), 12) * 5, 10)]"]
+    },
+    
+    "controller.render.clock.ampm": {
+      "arrays": {
+        "textures": {
+          "Array.ampm": [
+            "Texture.am", "Texture.pm"
+          ]
+        }
+      },
+      "geometry": "Geometry.clock_ampm",
+      "materials": [{"*": "Material.calendar"}],
+      "textures": ["Array.ampm[math.floor(query.time_of_day * 2)]"]
+    }
+  }
+}
